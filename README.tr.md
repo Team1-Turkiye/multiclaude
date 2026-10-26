@@ -147,7 +147,7 @@ Detaylar için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına bak.
 
 ## Emeği geçenler
 
-[**@xBrokkr**](https://github.com/xBrokkr) tarafından geliştirildi, [**Team1 Türkiye**](https://github.com/Team1-Turkiye) çatısı altında sürdürülüyor. Claude Code ile yapıldı.
+[**@xBrokkr**](https://github.com/xBrokkr) tarafından geliştirildi, [**Team1 Türkiye**](https://github.com/Team1-Turkiye) çatısı altında sürdürülüyor.
 
 ## Lisans
 

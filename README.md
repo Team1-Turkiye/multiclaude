@@ -223,7 +223,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the dev setup, design principles and 
 
 ## Credits
 
-Created by [**@xBrokkr**](https://github.com/xBrokkr) and maintained under [**Team1 Türkiye**](https://github.com/Team1-Turkiye). Built with Claude Code.
+Created by [**@xBrokkr**](https://github.com/xBrokkr) and maintained under [**Team1 Türkiye**](https://github.com/Team1-Turkiye).
 
 ## License
 
