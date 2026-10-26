@@ -1,0 +1,39 @@
+{
+  "name": "todo-app",
+  "context": "Next.js 15 (App Router) + TypeScript + Drizzle/Postgres. Use src/ layout. API routes return JSON {data|error}. UI uses Tailwind + shadcn/ui components from src/components/ui.",
+  "tasks": [
+    {
+      "id": "schema",
+      "title": "DB schema and shared types",
+      "tier": "opus",
+      "depends_on": [],
+      "files": ["src/db/**", "src/types/**", "drizzle.config.ts", "package.json"],
+      "prompt": "Create the Drizzle schema for users and todos (id, userId, title, done, createdAt), a db client in src/db/index.ts, and shared TS types in src/types. Add needed deps to package.json. Done when `npx tsc --noEmit` passes."
+    },
+    {
+      "id": "auth",
+      "title": "Email/password auth",
+      "tier": "opus",
+      "effort": "high",
+      "depends_on": ["schema"],
+      "files": ["src/auth/**", "src/app/(auth)/**", "src/middleware.ts"],
+      "prompt": "Implement session-based email/password auth (argon2 hashing, httpOnly secure cookies, CSRF-safe POST handlers), login/register pages, and middleware protecting /app/*. Done when typecheck passes and you've described the threat model in notes."
+    },
+    {
+      "id": "api",
+      "title": "Todo CRUD API",
+      "tier": "sonnet",
+      "depends_on": ["schema"],
+      "files": ["src/app/api/todos/**"],
+      "prompt": "REST handlers for todos (list/create/update/delete) scoped to the current user via getSession() from src/auth (assume it exists: returns {userId}|null). Validate input with zod. Done when typecheck passes."
+    },
+    {
+      "id": "docs",
+      "title": "README",
+      "tier": "haiku",
+      "depends_on": [],
+      "files": ["README.md"],
+      "prompt": "Write a concise README: setup, env vars (DATABASE_URL, SESSION_SECRET), scripts."
+    }
+  ]
+}

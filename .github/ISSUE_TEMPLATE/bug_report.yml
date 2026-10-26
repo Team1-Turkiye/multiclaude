@@ -1,0 +1,30 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: multiclaude output / report.md
+      description: Paste the relevant log lines. **Remove account e-mails and any secrets first.**
+      render: text
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan (optional)
+      description: A minimal plan.json that reproduces the issue.
+      render: json
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: "Output of `claude --version`, `python3 --version`, and your OS"
+    validations:
+      required: true
